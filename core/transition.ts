@@ -6,7 +6,7 @@ import {
   startOfDay,
 } from "date-fns";
 import type { Transition } from "./types";
-import { differenceOnlyMinutes } from "@/utils/date";
+import { differenceOnlyMinutes } from "~/utils/date";
 
 export function getWakingPlan({ from, to }: Transition): Date[] {
   if (isSameDay(to, from)) throw new Error("Cannot transition on the same day");
